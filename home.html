@@ -22,6 +22,9 @@
     <li><a href="#activity">Kegiatan</a></li>
     <li><a href="#contact">Kontak</a></li>
   </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+  </div>
 </nav>
 
 <!-- ==============================
@@ -32,47 +35,65 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
+    <div class="hero-copy">
+      <!-- Ganti teks status di bawah ini -->
+      <div class="hero-tag">Open to opportunities</div>
 
-    <!-- Ganti teks status di bawah ini -->
-    <div class="hero-tag">Open to opportunities</div>
+      <!-- Ganti nama kamu di sini -->
+      <h1>Berinda Alya<br><span>Kusuma</span></h1>
 
-    <!-- Ganti nama kamu di sini -->
-    <h1>Berinda Alya<br><span>Kusuma</span></h1>
+      <!-- Ganti deskripsi singkat kamu -->
+      <p class="hero-subtitle">
+        Frontend Developer & UI/UX Enthusiast yang juga mendalami Quality Assurance.
+        Membangun antarmuka yang bersih, fungsional, dan menyenangkan untuk digunakan.
+      </p>
 
-    <!-- Ganti deskripsi singkat kamu -->
-    <p class="hero-subtitle">
-      Frontend Developer & UI/UX Enthusiast yang juga mendalami Quality Assurance.
-      Membangun antarmuka yang bersih, fungsional, dan menyenangkan untuk digunakan.
-    </p>
+      <!-- Role badge — tambah/hapus sesuai kebutuhan -->
+      <div class="hero-roles">
+        <span class="role-badge fe">Frontend Developer</span>
+        <span class="role-badge ui">UI / UX</span>
+        <span class="role-badge qa">QA Engineer</span>
+      </div>
 
-    <!-- Role badge — tambah/hapus sesuai kebutuhan -->
-    <div class="hero-roles">
-      <span class="role-badge fe">Frontend Developer</span>
-      <span class="role-badge ui">UI / UX</span>
-      <span class="role-badge qa">QA Engineer</span>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Lihat Proyek →</a>
+        <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+      </div>
     </div>
 
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">Lihat Proyek →</a>
-      <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
-    </div>
-<div class="hero-photo-wrap">
+    <div class="hero-photo-wrap">
       <div class="hero-photo-inner">
-        <!-- <img src="foto.jpg" alt="Foto Berinda Alya Kusuma"> -->
+        <!-- Ganti dengan foto asli kamu dan hapus placeholder di bawah -->
+        <!-- <img src="foto-berinda.jpg" alt="Foto Berinda Alya Kusuma" class="hero-photo"> -->
         <div class="hero-photo-placeholder">
           <span>&#128444;&#65039;</span>
           <p>Ganti dengan fotomu</p>
-          <p class="photo-note">src="nama-file-foto.jpg"</p>
+          <p class="photo-note">src="foto-berinda.jpg"</p>
         </div>
       </div>
       <div class="hero-deco-dot d1"></div>
       <div class="hero-deco-dot d2"></div>
       <div class="hero-deco-dot d3"></div>
     </div>
- 
-  </div>
   </div>
 </section>
+
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  const updateThemeButton = () => {
+    themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  };
+  updateThemeButton();
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeButton();
+  });
+</script>
 
 <!-- ==============================
      ABOUT SECTION
@@ -134,6 +155,17 @@
         <span class="skill-pill"><span class="skill-dot bootstrap"></span>Bootstrap</span>
       </div>
     </div>
+ 
+    <div class="skill-category">
+  <div class="skill-cat-title">Backend Development</div>
+  <div class="skill-pills">
+    <span class="skill-pill"><span class="skill-dot laravel"></span>Laravel</span>
+    <span class="skill-pill"><span class="skill-dot php"></span>PHP</span>
+    <span class="skill-pill"><span class="skill-dot mysql"></span>MySQL</span>
+    <span class="skill-pill"><span class="skill-dot firebase"></span>Firebase</span>
+    <span class="skill-pill"><span class="skill-dot rest"></span>Rest API</span>
+  </div>
+</div>
 
     <div class="skill-category">
       <div class="skill-cat-title">UI / UX Design</div>
@@ -267,17 +299,18 @@
         <div class="activity-desc">Mempelajari metodologi pengujian perangkat lunak, penulisan test case, dan penggunaan tools QA seperti Postman.</div>
       </div>
     </div>
-    <!-- KEGIATAN 3 -->
+
+    <!-- KEGIATAN 4 -->
     <div class="activity-item">
-      <div class="activity-dot">🔍</div>
+      <div class="activity-dot">📈</div>
       <div class="activity-body">
-        <div class="activity-title">Internship — QA Engineering</div>
-        <div class="activity-meta">2024 – Sekarang · Self- </div>
-        <div class="activity-desc">Mempelajari metodologi pengujian perangkat lunak, penulisan test case, dan penggunaan tools QA seperti Postman.</div>
+        <div class="activity-title">Mini Project — Dashboard Data</div>
+        <div class="activity-meta">2023 · Inisiatif Pribadi</div>
+        <div class="activity-desc">Membangun dashboard sederhana untuk menampilkan data akademik dan visualisasi menggunakan HTML, CSS, dan JavaScript.</div>
       </div>
     </div>
 
-    <!-- KEGIATAN 4 -->
+    <!-- KEGIATAN 5 -->
     <div class="activity-item">
       <div class="activity-dot">🏫</div>
       <div class="activity-body">
@@ -286,6 +319,9 @@
         <div class="activity-desc">Menamatkan SMK dengan jurusan yang linier, mendapatkan dasar kuat dalam pemrograman, desain web, dan jaringan komputer.</div>
       </div>
     </div>
+  </div>
+  <div class="section-actions">
+    <a href="activity.html" class="btn btn-outline">Show More</a>
   </div>
 </section>
 

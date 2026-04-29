@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riwayat & Kegiatan — Berinda Alya Kusuma</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="home.html" class="nav-logo">Berinda Alya Kusuma</a>
+  <ul class="nav-links">
+    <li><a href="home.html#about">Tentang</a></li>
+    <li><a href="home.html#skills">Skill</a></li>
+    <li><a href="home.html#projects">Proyek</a></li>
+    <li><a href="home.html#activity">Kegiatan</a></li>
+    <li><a href="home.html#contact">Kontak</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<section id="activity">
+  <p class="section-label">// kegiatan</p>
+  <h2 class="section-title">Riwayat & Kegiatan Lengkap</h2>
+  <div class="activity-list fade-in">
+    <div class="activity-item">
+      <div class="activity-dot">🎓</div>
+      <div class="activity-body">
+        <div class="activity-title">Mahasiswa Aktif — Teknik Informatika</div>
+        <div class="activity-meta">2023 – Sekarang · Semester 4</div>
+        <div class="activity-desc">Menempuh studi di bidang teknik informatika, fokus pada pengembangan web dan rekayasa perangkat lunak.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-dot">💻</div>
+      <div class="activity-body">
+        <div class="activity-title">Proyek Frontend — Tim Kampus</div>
+        <div class="activity-meta">2024 · Kolaborasi</div>
+        <div class="activity-desc">Berkolaborasi dalam pengembangan aplikasi web untuk keperluan akademik bersama tim mahasiswa.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-dot">🔍</div>
+      <div class="activity-body">
+        <div class="activity-title">Belajar Mandiri — QA Engineering</div>
+        <div class="activity-meta">2024 – Sekarang · Self-learning</div>
+        <div class="activity-desc">Mempelajari metodologi pengujian perangkat lunak, penulisan test case, dan penggunaan tools QA seperti Postman.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-dot">📈</div>
+      <div class="activity-body">
+        <div class="activity-title">Mini Project — Dashboard Data</div>
+        <div class="activity-meta">2023 · Inisiatif Pribadi</div>
+        <div class="activity-desc">Membangun dashboard sederhana untuk menampilkan data akademik dan visualisasi menggunakan HTML, CSS, dan JavaScript.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-dot">🏫</div>
+      <div class="activity-body">
+        <div class="activity-title">SMK — Rekayasa Perangkat Lunak</div>
+        <div class="activity-meta">2020 – 2023 · 3 Tahun</div>
+        <div class="activity-desc">Menamatkan SMK dengan jurusan yang linier, mendapatkan dasar kuat dalam pemrograman, desain web, dan jaringan komputer.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-dot">🤝</div>
+      <div class="activity-body">
+        <div class="activity-title">Workshop & Bootcamp</div>
+        <div class="activity-meta">2023 – 2024 · Pelatihan</div>
+        <div class="activity-desc">Mengikuti berbagai workshop tentang UI/UX, prototyping, dan praktik pengembangan front-end modern.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-dot">🧩</div>
+      <div class="activity-body">
+        <div class="activity-title">Kompetisi & Hackathon</div>
+        <div class="activity-meta">2022 – 2024 · Partisipasi</div>
+        <div class="activity-desc">Berpartisipasi dalam kompetisi pengembangan aplikasi dan hackathon untuk mengasah kreativitas dan kerja sama tim.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-actions">
+    <a href="home.html#activity" class="btn btn-outline">Kembali ke Beranda</a>
+  </div>
+</section>
+
+<!-- ==============================
+     FOOTER
+============================== -->
+<footer>
+  <p>Dibuat dengan ❤️ oleh Berinda Alya Kusuma · 2026</p>
+</footer>
+
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  const updateThemeButton = () => {
+    themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  };
+  updateThemeButton();
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeButton();
+  });
+
+  // Animasi fade-in saat scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
