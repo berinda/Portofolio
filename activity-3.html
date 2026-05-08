@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Kegiatan 3 — QA Engineering</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="#home" class="nav-logo">Berinda Alya Kusuma</a>
+  <ul class="nav-links">
+    <li><a href="#home">About Me</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skill</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activity">Activities</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<section id="activity" class="detail-page">
+  <div class="detail-hero fade-in">
+    <div class="detail-images">
+      <div class="detail-image detail-image--large">
+        <img src="image/activity-3a.jpg" alt="Sesi testing software dengan Postman">
+      </div>
+      <div class="detail-image-row">
+        <div class="detail-image">
+          <img src="image/activity-3b.jpg" alt="Catatan test case di meja kerja">
+        </div>
+        <div class="detail-image">
+          <img src="image/activity-3c.jpg" alt="Layar komputer menampilkan laporan bug">
+        </div>
+      </div>
+    </div>
+    <div class="detail-copy">
+      <p class="section-label">// detail kegiatan</p>
+      <p class="detail-overline">Belajar Mandiri — QA Engineering</p>
+      <h1 class="detail-title">Mengasah kemampuan testing dengan praktik nyata</h1>
+      <div class="detail-subtitle">Belajar QA secara mandiri dengan fokus pada bug reporting, test case, dan pengujian fungsional menggunakan alat modern.</div>
+      <div class="detail-meta-list">
+        <div class="detail-meta-item"><span></span>Test case writing</div>
+        <div class="detail-meta-item"><span></span>Bug tracking</div>
+        <div class="detail-meta-item"><span></span>Uji API dengan Postman</div>
+      </div>
+      <div class="detail-note">Ganti gambar ini dengan dokumentasi kegiatan QA, screenshot testing, atau sertifikat pelatihan yang kamu punya.</div>
+      <div class="detail-actions">
+        <a href="#" class="btn btn-primary">Lihat Sertifikat</a>
+        <a href="home.html#activity" class="btn btn-outline">Back to Activity</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Made with ❤️ by Berinda Alya Kusuma · 2026</p>
+</footer>
+
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  const updateThemeButton = () => {
+    themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  };
+  updateThemeButton();
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeButton();
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

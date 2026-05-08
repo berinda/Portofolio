@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Details 2 — UI/UX</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="#home" class="nav-logo">Berinda Alya Kusuma</a>
+  <ul class="nav-links">
+    <li><a href="#home">About Me</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skill</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activity">Activities</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<section id="project-detail" class="detail-page">
+  <div class="detail-hero fade-in">
+    <div class="detail-images">
+      <div class="detail-image detail-image--large">
+        <img src="image/Ambulink/Beranda beforelogin.png" alt="Test case dashboard with list of test cases">
+      </div>
+      <div class="detail-image-row">
+        <div class="detail-image">
+          <img src="image/Ambulink/Login.png" alt="Structured test case form">
+        </div>
+        <div class="detail-image">
+          <img src="image/Ambulink/Tambah Gratis.png" alt="Bug report and testing status">
+        </div>
+      </div>
+    </div>
+    <div class="detail-copy">
+      <p class="section-label">// project details</p>
+      <p class="detail-overline">UI/UX</p>
+      <h1 class="detail-title">UI/UX Design for Emergency Ambulance Finder Website</h1>
+      <div class="detail-subtitle">AmbuLink is a UI/UX website project created for a national web design competition.
+The project was designed to help users find nearby ambulance services, including both free and paid options, through a responsive, simple, and user-friendly interface.
+
+In this project, I focused on designing the UI/UX while ensuring the user flow remained clear and intuitive, allowing users to easily access information and navigate the platform efficiently, especially during emergency situations.</div>
+      <div class="detail-meta-list">
+        <div class="detail-meta-item"><span></span>Fast nearby ambulance search</div>
+        <div class="detail-meta-item"><span></span>Free and paid ambulance service information</div>
+        <div class="detail-meta-item"><span></span>Responsive design with a simple and user-friendly interface</div>
+      </div>
+      <div class="detail-actions">
+        <a href="https://bit.ly/4dbsdhN" class="btn btn-primary">Figma</a>
+        <a href="home.html#projects" class="btn btn-outline">Back to Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Made with ❤️ by Berinda Alya Kusuma · 2026</p>
+</footer>
+
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  const updateThemeButton = () => {
+    themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  };
+  updateThemeButton();
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeButton();
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

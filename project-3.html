@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Details 3 — Dashboard Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="#home" class="nav-logo">Berinda Alya Kusuma</a>
+  <ul class="nav-links">
+    <li><a href="#home">About Me</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skill</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activity">Activities</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<section id="project-detail" class="detail-page">
+  <div class="detail-hero fade-in">
+    <div class="detail-images">
+      <div class="detail-image detail-image--large">
+        <img src="image/To-Do List/Login.png" alt="Dashboard admin dengan grafik dan kartu statistik">
+      </div>
+      <div class="detail-image-row">
+        <div class="detail-image">
+          <img src="image/To-Do List/Add.png" alt="Panel kontrol pengguna dan data statistik">
+        </div>
+        <div class="detail-image">
+          <img src="image/To-Do List/Detail.png" alt="Layout admin responsif di desktop dan tablet">
+        </div>
+      </div>
+    </div>
+    <div class="detail-copy">
+      <p class="section-label">// Project Details</p>
+      <p class="detail-overline">Full Stack Developer</p>
+      <h1 class="detail-title">Full Stack To-Do List Website</h1>
+      <div class="detail-subtitle">To-Do List is a full stack to-do list website project developed during the RevoU bootcamp program.
+The website was designed to help users organize daily tasks and activities through a clean, responsive, and easy-to-use interface.
+
+In this project, I was involved in both UI/UX design and full stack development, including interface design, task data management, and ensuring a smooth and efficient user experience.</div>
+      <div class="detail-meta-list">
+        <div class="detail-meta-item"><span></span>Task management with add, and delete features</div>
+        <div class="detail-meta-item"><span></span>User-friendly interface</div>
+        <div class="detail-meta-item"><span></span>Simple productivity tracking for daily activities</div>
+      </div>
+      <div class="detail-actions">
+        <a href="https://bit.ly/4duSVU2" class="btn btn-primary">Figma</a>
+        <a href="https://github.com/berinda/CodingCamp-19Jan26-BerindaAlya.git" class="btn btn-primary">GitHub</a>
+        <a href="home.html#projects" class="btn btn-outline">Back to Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Made with ❤️ by Berinda Alya Kusuma · 2026</p>
+</footer>
+
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  const updateThemeButton = () => {
+    themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  };
+  updateThemeButton();
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeButton();
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

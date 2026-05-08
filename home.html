@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +16,13 @@
 <nav>
   <a href="#home" class="nav-logo">Berinda Alya Kusuma</a>
   <ul class="nav-links">
-    <li><a href="#about">Tentang</a></li>
+    <li><a href="#home">About Me</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#skills">Skill</a></li>
-    <li><a href="#projects">Proyek</a></li>
-    <li><a href="#activity">Kegiatan</a></li>
-    <li><a href="#contact">Kontak</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activity">Activities</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-actions">
     <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
@@ -44,32 +46,33 @@
 
       <!-- Ganti deskripsi singkat kamu -->
       <p class="hero-subtitle">
-        Frontend Developer & UI/UX Enthusiast yang juga mendalami Quality Assurance.
-        Membangun antarmuka yang bersih, fungsional, dan menyenangkan untuk digunakan.
+        Hi! I’m an IT student interested in Frontend Development, QA Engineering, and UX Research.
+I enjoy exploring how digital products are designed, built, and improved from creating user interfaces to testing features and understanding user needs.
       </p>
 
       <!-- Role badge — tambah/hapus sesuai kebutuhan -->
       <div class="hero-roles">
-        <span class="role-badge fe">Frontend Developer</span>
-        <span class="role-badge ui">UI / UX</span>
+        <span class="role-badge fe">Quality Engineer</span>
         <span class="role-badge qa">QA Engineer</span>
+        <span class="role-badge ui">UX Researcher</span>
+        <!-- <span class="role-badge qa">Business Analyst</span> -->
+        <span class="role-badge qa">Development</span>
       </div>
 
       <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">Lihat Proyek →</a>
-        <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+        <a href="#projects" class="btn btn-primary">View Projects →</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
       </div>
     </div>
 
     <div class="hero-photo-wrap">
       <div class="hero-photo-inner">
-        <!-- Ganti dengan foto asli kamu dan hapus placeholder di bawah -->
-        <!-- <img src="foto-berinda.jpg" alt="Foto Berinda Alya Kusuma" class="hero-photo"> -->
-        <div class="hero-photo-placeholder">
+        <img src="image/berinda1.jpeg" alt="Photo of Berinda Alya Kusuma" class="hero-photo">
+        <!-- <div class="hero-photo-placeholder">
           <span>&#128444;&#65039;</span>
           <p>Ganti dengan fotomu</p>
           <p class="photo-note">src="foto-berinda.jpg"</p>
-        </div>
+        </div> -->
       </div>
       <div class="hero-deco-dot d1"></div>
       <div class="hero-deco-dot d2"></div>
@@ -96,41 +99,40 @@
 </script>
 
 <!-- ==============================
-     ABOUT SECTION
-     Edit: bio dan statistik
+     EDUCATION SECTION
+     Academic background
 ============================== -->
-<section id="about">
-  <div class="about-grid fade-in">
-    <div class="about-text">
-      <p class="section-label">// tentang saya</p>
-      <h2 class="section-title compact">Halo, saya Berinda 👋</h2>
-
-      <!-- Edit paragraf bio kamu di sini -->
-      <p>Saya seorang mahasiswi yang saat ini menempuh pendidikan di semester 4, dengan latar belakang <strong>3 tahun di SMK jurusan linier</strong>.</p>
-      <p>Saya memiliki passion di bidang <strong>Frontend Development</strong>, tertarik pada desain antarmuka (<strong>UI/UX</strong>), dan sedang mendalami dunia <strong>Quality Assurance Engineering</strong>.</p>
-      <p>Saya percaya bahwa kode yang baik bukan hanya kode yang bekerja — tapi juga yang mudah dipahami dan diuji.</p>
+<section id="education">
+  <div class="education-wrapper fade-in">
+    <div class="education-header">
+      <p class="section-label">// academic background</p>
+      <h2 class="section-title">Education</h2>
+      <!-- <p class="education-intro">I’m currently studying IT in semester 4, building a strong foundation in software engineering and quality assurance. My focus is on Frontend Development, QA Engineering, and UX Research, combining technical skills with user empathy to create better digital experiences.</p> -->
     </div>
 
-    <!-- Edit angka statistik kamu -->
-    <div class="about-stats">
-      <div class="stat-card">
-        <div class="stat-num">4</div>
-        <div class="stat-desc">Semester Kuliah</div>
+    <div class="education-grid">
+      <div class="education-card">
+        <div class="education-card-logo">
+          <img src="image/ub.png" alt="Universitas Brawijaya logo">
+        </div>
+        <div class="education-card-body">
+          <h3>Universitas Brawijaya</h3>
+          <p class="education-degree">Information Technology</p>
+          <p class="education-meta">Aug 2024 – Now · Malang, Indonesia</p>
+          <span class="education-badge">GPA 3.81 / 4.00</span>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">3 thn</div>
-        <div class="stat-desc">SMK Linier</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">3+</div>
-        <div class="stat-desc">Bidang Keahlian</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">∞</div>
-        <div class="stat-desc">Semangat Belajar</div>
+
+      <div class="education-card">
+        <div class="education-card-logo"><img src="image/smk.png" alt=""></div>
+        <div class="education-card-body">
+          <h3>SMK Negeri 8 Malang</h3>
+          <p class="education-degree">Software Engineering</p>
+          <p class="education-meta">2020 – 2023 · Malang, Indonesia</p>
+          <span class="education-badge">Report Card Grade: 3.8+</span>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -141,8 +143,8 @@
 ============================== -->
 <section id="skills">
   <div class="skills-wrapper fade-in">
-    <p class="section-label">// keahlian</p>
-    <h2 class="section-title">Tech Stack & Skill</h2>
+    <p class="section-label">// skills</p>
+    <h2 class="section-title">Tech Stack & Skills</h2>
 
     <div class="skill-category">
       <div class="skill-cat-title">Frontend Development</div>
@@ -150,7 +152,7 @@
         <span class="skill-pill"><span class="skill-dot html"></span>HTML5</span>
         <span class="skill-pill"><span class="skill-dot css"></span>CSS3</span>
         <span class="skill-pill"><span class="skill-dot js"></span>JavaScript</span>
-        <span class="skill-pill"><span class="skill-dot react"></span>React</span>
+        <!-- <span class="skill-pill"><span class="skill-dot react"></span>React</span> -->
         <span class="skill-pill"><span class="skill-dot tailwind"></span>Tailwind CSS</span>
         <span class="skill-pill"><span class="skill-dot bootstrap"></span>Bootstrap</span>
       </div>
@@ -176,7 +178,6 @@
         <span class="skill-pill"><span class="skill-dot research"></span>User Research</span>
       </div>
     </div>
-
     <div class="skill-category">
       <div class="skill-cat-title">Quality Assurance</div>
       <div class="skill-pills">
@@ -188,12 +189,12 @@
     </div>
 
     <div class="skill-category">
-      <div class="skill-cat-title">Tools & Lainnya</div>
+      <div class="skill-cat-title">Tools & Others</div>
       <div class="skill-pills">
         <span class="skill-pill"><span class="skill-dot git"></span>Git & GitHub</span>
         <span class="skill-pill"><span class="skill-dot vscode"></span>VS Code</span>
-        <span class="skill-pill"><span class="skill-dot npm"></span>npm / yarn</span>
-        <span class="skill-pill"><span class="skill-dot linux"></span>Linux</span>
+        <span class="skill-pill"><span class="skill-dot canva"></span>Canva</span>
+        <!-- <span class="skill-pill"><span class="skill-dot linux"></span>Linux</span> -->
       </div>
     </div>
 
@@ -206,57 +207,83 @@
      Ganti href="#" dengan link GitHub/live demo
 ============================== -->
 <section id="projects">
-  <p class="section-label section-center">// portofolio</p>
-  <h2 class="section-title section-center">Proyek Pilihan</h2>
+  <p class="section-label section-center">// portfolio</p>
+  <h2 class="section-title section-center">All Projects</h2>
   <div class="projects-grid fade-in">
 
     <!-- PROJECT 1 — Edit sesuai proyekmu -->
-    <a href="#" target="_blank" rel="noopener noreferrer" class="project-card">
-      <div class="project-icon project-icon--purple">🛒</div>
-      <div class="project-title">E-Commerce UI</div>
-      <div class="project-desc">Antarmuka toko online dengan desain modern, filter produk dinamis, dan keranjang belanja interaktif.</div>
-      <div class="project-tags">
-        <span class="project-tag">React</span>
-        <span class="project-tag">Tailwind</span>
-        <span class="project-tag">Figma</span>
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-label">PROJECT 01</span>
+        <span class="project-category">UI/UX</span>
       </div>
-    </a>
+      <div class="project-icon project-icon--purple"><img src="image/BeeFood/logo.png" alt="Bee-Food"></div>
+      <div class="project-title">Bee-Food</div>
+      <div class="project-desc">A recipe note mobile app project created during vocational high school with a simple and user-friendly interface.</div>
+      <div class="project-tags">
+        <span class="project-tag">Mobile Interface</span>
+        <span class="project-tag">Wireframing</span>
+        <span class="project-tag">Prototyping</span>
+        <span class="project-tag">UI/UX</span>
+        <span class="project-tag">User Research</span>
+      </div>
+      <a href="project-1.html" class="project-detail-btn"><span>→</span> View Project</a>
+    </div>
 
     <!-- PROJECT 2 — Edit sesuai proyekmu -->
-    <a href="#" target="_blank" rel="noopener noreferrer" class="project-card">
-      <div class="project-icon project-icon--teal">📋</div>
-      <div class="project-title">Test Case Management</div>
-      <div class="project-desc">Aplikasi manajemen test case sederhana untuk membantu tim QA mendokumentasikan pengujian dengan lebih rapi.</div>
-      <div class="project-tags">
-        <span class="project-tag">HTML/CSS</span>
-        <span class="project-tag">JavaScript</span>
-        <span class="project-tag">QA</span>
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-label">PROJECT 02</span>
+        <span class="project-category">UI/UX</span>
       </div>
-    </a>
+      <div class="project-icon project-icon--teal"><img src="image/Ambulink/AmbuLink.png" alt=""></div>
+      <div class="project-title">AmbuLink</div>
+      <div class="project-desc">A website design project for naational competition that helps users find the nearest ambulance services, including both free and paid options, through a fast and user-friendly experience.</div>
+      <div class="project-tags">
+        <span class="project-tag">Mobile Interface</span>
+        <span class="project-tag">Wireframing</span>
+        <span class="project-tag">Prototyping</span>
+        <span class="project-tag">UI/UX</span>
+        <span class="project-tag">User Research</span>
+      </div>
+      <a href="project-2.html" class="project-detail-btn"><span>→</span> View Project</a>
+    </div>
 
     <!-- PROJECT 3 — Edit sesuai proyekmu -->
-    <a href="#" target="_blank" rel="noopener noreferrer" class="project-card">
-      <div class="project-icon project-icon--pink">🎨</div>
-      <div class="project-title">Dashboard Admin</div>
-      <div class="project-desc">Dashboard admin dengan visualisasi data, manajemen pengguna, dan antarmuka yang responsif di semua perangkat.</div>
-      <div class="project-tags">
-        <span class="project-tag">React</span>
-        <span class="project-tag">Chart.js</span>
-        <span class="project-tag">Bootstrap</span>
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-label">PROJECT 03</span>
+        <span class="project-category">Fullstack</span>
       </div>
-    </a>
+      <div class="project-icon project-icon--pink"><img src="image/To-Do List/Group 5 1.png" alt=""></div>
+      <div class="project-title">To-Do List</div>
+      <div class="project-desc">A full stack to-do list website project created during the RevoU bootcamp to help users manage daily tasks through a simple and user-friendly interface.</div>
+      <div class="project-tags">
+        <span class="project-tag">Full Stack Development</span>
+        <span class="project-tag">UI/UX</span>
+        <span class="project-tag">JavaScript</span>
+        <span class="project-tag">CRUD System</span>
+        <span class="project-tag">User Flow</span>
+      </div>
+      <a href="project-3.html" class="project-detail-btn"><span>→</span> View Project</a>
+    </div>
 
     <!-- PROJECT 4 — Edit sesuai proyekmu -->
-    <a href="#" target="_blank" rel="noopener noreferrer" class="project-card">
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-label">PROJECT 04</span>
+        <span class="project-category">MOBILE APP</span>
+      </div>
       <div class="project-icon project-icon--yellow">📱</div>
       <div class="project-title">Mobile App Prototype</div>
-      <div class="project-desc">Prototipe aplikasi mobile untuk manajemen tugas harian, dibuat menggunakan Figma dengan alur UX yang intuitif.</div>
+      <div class="project-desc">Mobile app prototype for daily task management, created using Figma with intuitive UX flow.</div>
       <div class="project-tags">
         <span class="project-tag">Figma</span>
         <span class="project-tag">UI/UX</span>
         <span class="project-tag">Prototype</span>
       </div>
-    </a>
+      <a href="project-4.html" class="project-detail-btn"><span>→</span> View Project</a>
+    </div>
 
   </div>
 </section>
@@ -266,17 +293,18 @@
      Edit: ikon, judul, tahun, deskripsi
 ============================== -->
 <section id="activity">
-  <p class="section-label">// kegiatan</p>
-  <h2 class="section-title">Riwayat & Kegiatan</h2>
+  <p class="section-label">// activities</p>
+  <h2 class="section-title">History & Activities</h2>
   <div class="activity-list fade-in">
 
     <!-- KEGIATAN 1 -->
     <div class="activity-item">
       <div class="activity-dot">🎓</div>
       <div class="activity-body">
-        <div class="activity-title">Mahasiswa Aktif — Teknik Informatika</div>
-        <div class="activity-meta">2023 – Sekarang · Semester 4</div>
-        <div class="activity-desc">Menempuh studi di bidang teknik informatika, fokus pada pengembangan web dan rekayasa perangkat lunak.</div>
+        <div class="activity-title">Active Student — Information Technology</div>
+        <div class="activity-meta">2023 – Present · Semester 4</div>
+        <div class="activity-desc">Pursuing studies in information technology, focusing on web development and software engineering.</div>
+        <div class="activity-footer"><a href="activity-1.html" class="activity-link">Detail / Certificate</a></div>
       </div>
     </div>
 
@@ -284,9 +312,10 @@
     <div class="activity-item">
       <div class="activity-dot">💻</div>
       <div class="activity-body">
-        <div class="activity-title">Proyek Frontend — Tim Kampus</div>
-        <div class="activity-meta">2024 · Kolaborasi</div>
-        <div class="activity-desc">Berkolaborasi dalam pengembangan aplikasi web untuk keperluan akademik bersama tim mahasiswa.</div>
+        <div class="activity-title">Frontend Project — Campus Team</div>
+        <div class="activity-meta">2024 · Collaboration</div>
+        <div class="activity-desc">Collaborated in developing a web application for academic needs with a team of students.</div>
+        <div class="activity-footer"><a href="activity-2.html" class="activity-link">Detail / Certificate</a></div>
       </div>
     </div>
 
@@ -294,34 +323,38 @@
     <div class="activity-item">
       <div class="activity-dot">🔍</div>
       <div class="activity-body">
-        <div class="activity-title">Belajar Mandiri — QA Engineering</div>
-        <div class="activity-meta">2024 – Sekarang · Self-learning</div>
-        <div class="activity-desc">Mempelajari metodologi pengujian perangkat lunak, penulisan test case, dan penggunaan tools QA seperti Postman.</div>
-      </div>
-    </div>
-
-    <!-- KEGIATAN 4 -->
-    <div class="activity-item">
-      <div class="activity-dot">📈</div>
-      <div class="activity-body">
-        <div class="activity-title">Mini Project — Dashboard Data</div>
-        <div class="activity-meta">2023 · Inisiatif Pribadi</div>
-        <div class="activity-desc">Membangun dashboard sederhana untuk menampilkan data akademik dan visualisasi menggunakan HTML, CSS, dan JavaScript.</div>
-      </div>
-    </div>
-
-    <!-- KEGIATAN 5 -->
-    <div class="activity-item">
-      <div class="activity-dot">🏫</div>
-      <div class="activity-body">
-        <div class="activity-title">SMK — Rekayasa Perangkat Lunak</div>
-        <div class="activity-meta">2020 – 2023 · 3 Tahun</div>
-        <div class="activity-desc">Menamatkan SMK dengan jurusan yang linier, mendapatkan dasar kuat dalam pemrograman, desain web, dan jaringan komputer.</div>
+        <div class="activity-title">Self-Learning — QA Engineering</div>
+        <div class="activity-meta">2024 – Present · Self-learning</div>
+        <div class="activity-desc">Learning software testing methodologies, test case writing, and using QA tools like Postman.</div>
+        <div class="activity-footer"><a href="activity-3.html" class="activity-link">Detail / Certificate</a></div>
       </div>
     </div>
   </div>
-  <div class="section-actions">
+  <!-- <div class="section-actions">
     <a href="activity.html" class="btn btn-outline">Show More</a>
+  </div> -->
+</section>
+
+<!-- ==============================
+     WORK SECTION
+     Edit: pengalaman kerja
+============================== -->
+<section id="work">
+  <div class="work-wrapper fade-in">
+    <p class="section-label">// work</p>
+    <h2 class="section-title">Work Experience</h2>
+    <div class="work-list">
+      <a href="#" class="work-card">
+        <div class="work-card-title">QA Intern — [Nama Perusahaan]</div>
+        <div class="work-card-subtitle">2024 · Internship</div>
+        <p class="work-card-desc">Assisted in testing application features, writing test cases, and reporting bugs to improve product quality.</p>
+        <div class="work-card-tags">
+          <span class="work-card-tag">Manual Testing</span>
+          <span class="work-card-tag">Bug Reporting</span>
+          <span class="work-card-tag">Postman</span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -330,9 +363,9 @@
 ============================== -->
 <section id="contact">
   <div class="contact-wrapper fade-in">
-    <p class="section-label">// kontak</p>
-    <h2 class="section-title">Mari Terhubung!</h2>
-    <p>Saya terbuka untuk peluang magang, kolaborasi proyek, atau sekadar ngobrol tentang teknologi dan desain. Jangan ragu untuk menghubungi saya!</p>
+    <p class="section-label">// contact</p>
+    <h2 class="section-title">Let's Connect!</h2>
+    <p>I'm open to internship opportunities, project collaborations, or just chatting about technology and design. Don't hesitate to contact me!</p>
 
     <div class="contact-links">
       <!-- Ganti href dengan link asli kamu -->
@@ -353,7 +386,7 @@
      Ganti nama dan tahun jika perlu
 ============================== -->
 <footer>
-  <p>Dibuat dengan ❤️ oleh Berinda Alya Kusuma · 2026</p>
+  <p>Made with ❤️ by Berinda Alya Kusuma · 2026</p>
 </footer>
 
 <!-- ==============================

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Detail 1 — Active Student</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="#home" class="nav-logo">Berinda Alya Kusuma</a>
+  <ul class="nav-links">
+    <li><a href="#home">About Me</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skill</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activity">Activities</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<section id="activity" class="detail-page">
+  <div class="detail-hero fade-in">
+    <div class="detail-images">
+      <div class="detail-image detail-image--large">
+        <img src="image/activity-1a.jpg" alt="Mahasiswa belajar di alun-alun kampus">
+      </div>
+      <div class="detail-image-row">
+        <div class="detail-image">
+          <img src="image/activity-1b.jpg" alt="Kelompok kerja bersama di depan laptop">
+        </div>
+        <div class="detail-image">
+          <img src="image/activity-1c.jpg" alt="Sketsa desain UI dan catatan projek">
+        </div>
+      </div>
+    </div>
+    <div class="detail-copy">
+      <p class="section-label">// detail kegiatan</p>
+      <p class="detail-overline">Mahasiswa Aktif — Teknik Informatika</p>
+      <h1 class="detail-title">Semester 4: Membangun skill digital dan praktik nyata</h1>
+      <div class="detail-subtitle">Menggabungkan ilmu kampus dengan proyek praktis untuk memperkuat kemampuan frontend, UI/UX, dan dasar QA agar siap bekerja di tim digital.</div>
+      <div class="detail-meta-list">
+        <div class="detail-meta-item"><span></span>Desain antarmuka responsif</div>
+        <div class="detail-meta-item"><span></span>Kolaborasi tim dan dokumentasi</div>
+        <div class="detail-meta-item"><span></span>Praktik awal QA & review</div>
+      </div>
+      <div class="detail-note">Ganti gambar di atas dengan foto kegiatan asli kamu. Klik tombol di bawah untuk menautkan sertifikat, dokumen, atau Google Drive.</div>
+      <div class="detail-actions">
+        <a href="#" class="btn btn-primary">Lihat Sertifikat</a>
+        <a href="home.html#activity" class="btn btn-outline">Back to Activity</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Made with ❤️ by Berinda Alya Kusuma · 2026</p>
+</footer>
+
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  const updateThemeButton = () => {
+    themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  };
+  updateThemeButton();
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeButton();
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
