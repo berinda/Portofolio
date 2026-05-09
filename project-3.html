@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
+<nav id="nav">
   <a href="home.html#home" class="nav-logo">Berinda Alya Kusuma</a>
   <ul class="nav-links">
     <li><a href="home.html#home">About Me</a></li>
@@ -21,6 +21,7 @@
   </ul>
   <div class="nav-actions">
     <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle mobile menu">☰</button>
   </div>
 </nav>
 
@@ -86,6 +87,16 @@ In this project, I was involved in both UI/UX design and full stack development,
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
     updateThemeButton();
   });
+
+  // Mobile menu toggle
+  const nav = document.getElementById('nav');
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-mobile-open');
+    });
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {

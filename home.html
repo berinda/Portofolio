@@ -13,7 +13,7 @@
 <!-- ==============================
      NAVBAR
 ============================== -->
-<nav>
+<nav id="nav">
   <a href="#home" class="nav-logo">Berinda Alya Kusuma</a>
   <ul class="nav-links">
     <li><a href="#home">About Me</a></li>
@@ -22,10 +22,12 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#activity">Activities</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#certificates">Certificates</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-actions">
     <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle mobile menu">☰</button>
   </div>
 </nav>
 
@@ -96,6 +98,16 @@ I enjoy exploring how digital products are designed, built, and improved from cr
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
     updateThemeButton();
   });
+
+  // Mobile menu toggle
+  const nav = document.getElementById('nav');
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-mobile-open');
+    });
+  }
 </script>
 
 <!-- ==============================
@@ -318,33 +330,35 @@ I enjoy exploring how digital products are designed, built, and improved from cr
 
     <!-- KEGIATAN 1 -->
     <div class="activity-item">
-      <div class="activity-dot">🎓</div>
+      <div class="activity-dot"><img src="image/olivia.jpg" alt=""></div>
       <div class="activity-body">
-        <div class="activity-title">Active Student — Information Technology</div>
-        <div class="activity-meta">2023 – Present · Semester 4</div>
-        <div class="activity-desc">Pursuing studies in information technology, focusing on web development and software engineering.</div>
+        <div class="activity-title">Volunteer - Liaison Officer</div>
+        <div class="activity-meta">2025 · Communication & Coordination</div>
+        <div class="activity-desc">Handled participants during a national competition event by ensuring smooth communication and coordination throughout the program.
+Collaborated with the jury liaison team to support event operations, manage participant needs, and maintain effective communication between committees and participants.</div>
         <!-- <div class="activity-footer"><a href="activity-1.html" class="activity-link">Detail / Certificate</a></div> -->
       </div>
     </div>
 
     <!-- KEGIATAN 2 -->
     <div class="activity-item">
-      <div class="activity-dot">💻</div>
+      <div class="activity-dot"><img src="image/GenG.jpg" alt=""></div>
       <div class="activity-body">
-        <div class="activity-title">Frontend Project — Campus Team</div>
-        <div class="activity-meta">2024 · Collaboration</div>
-        <div class="activity-desc">Collaborated in developing a web application for academic needs with a team of students.</div>
+        <div class="activity-title">Volunteer - Curriculum and Mentor Team</div>
+        <div class="activity-meta">2025 · Event Coordination</div>
+        <div class="activity-desc">Contributed to two activities under Generation Girl, including a bootcamp program and the main “Goes to School” event.
+Acted as the liaison between Generation Girl and the school while also coordinating with speakers and supporting event operations to ensure activities ran smoothly.</div>
         <!-- <div class="activity-footer"><a href="activity-2.html" class="activity-link">Detail / Certificate</a></div> -->
       </div>
     </div>
 
     <!-- KEGIATAN 3 -->
     <div class="activity-item">
-      <div class="activity-dot">🔍</div>
+      <div class="activity-dot"><img src="image/samsung.jpg" alt=""></div>
       <div class="activity-body">
-        <div class="activity-title">Self-Learning — QA Engineering</div>
-        <div class="activity-meta">2024 – Present · Self-learning</div>
-        <div class="activity-desc">Learning software testing methodologies, test case writing, and using QA tools like Postman.</div>
+        <div class="activity-title">Ambassador — Samsung UPP Ambassador</div>
+        <div class="activity-meta">2025 · Education Partnership</div>
+        <div class="activity-desc">Participating in Samsung’s education partnership program by helping promote Samsung products and special educational offers for students, teachers, lecturers, and academic communities through collaborative campaigns and digital outreach.</div>
         <!-- <div class="activity-footer"><a href="activity-3.html" class="activity-link">Detail / Certificate</a></div> -->
       </div>
     </div>
@@ -363,14 +377,189 @@ I enjoy exploring how digital products are designed, built, and improved from cr
     <p class="section-label">// work</p>
     <h2 class="section-title">Work Experience</h2>
     <div class="work-list">
-      <a href="#" class="work-card">
-        <div class="work-card-title">QA Intern — [Nama Perusahaan]</div>
-        <div class="work-card-subtitle">2024 · Internship</div>
-        <p class="work-card-desc">Assisted in testing application features, writing test cases, and reporting bugs to improve product quality.</p>
+      <a href="work-1.html" class="work-card">
+        <div class="work-card-title">Quality Assurance Intern — PT Retgoo Sentris Informa</div>
+        <div class="work-card-subtitle">2023 · Internship</div>
+        <p class="work-card-desc">Contributed to the testing process of business process-based systems by performing functional testing, validating workflows and application features based on user requirements and user stories, identifying bugs and system issues, and collaborating with the team to ensure the system operated according to client needs and designed business processes.</p>
         <div class="work-card-tags">
-          <span class="work-card-tag">Manual Testing</span>
+          <span class="work-card-tag">Quality Assurance (Manual Testing)</span>
           <span class="work-card-tag">Bug Reporting</span>
-          <span class="work-card-tag">Postman</span>
+          <span class="work-card-tag">Workflow Validation</span>
+          <span class="work-card-tag">System Flow Analysis</span>
+          <span class="work-card-tag">Problem Solving</span>
+          <span class="work-card-tag">Team Collaboration</span>
+        </div>
+        <div class="activity-footer">
+          <span class="activity-link">View Detail →</span>
+        </div>
+      </a>
+      
+      <a href="work-2.html" class="work-card">
+        <div class="work-card-title">Backend Intern — PT Retgoo Sentris Informa</div>
+        <div class="work-card-subtitle">2023 · Internship</div>
+        <p class="work-card-desc">Contributed to developing business process-based systems by designing system workflows, configuring backend logic using a low-code platform, managing data structures and relationships, and implementing features based on user requirements and business processes.</p>
+        <div class="work-card-tags">
+          <span class="work-card-tag">Business Process Design</span>
+          <span class="work-card-tag">Backend Logic Configuration</span>
+          <span class="work-card-tag">System Flow Analysis</span>
+          <span class="work-card-tag">Low-Code Development</span>
+          <span class="work-card-tag">Problem Solving</span>
+        </div>
+        <div class="activity-footer">
+          <span class="activity-link">View Detail →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     CERTIFICATES SECTION
+============================== -->
+<section id="certificates">
+  <div class="certificates-wrapper fade-in">
+    <p class="section-label">// credentials</p>
+    <h2 class="section-title">Certificates</h2>
+    <div class="certificates-grid">
+      <!-- Contoh Sertifikat 1 -->
+      <a href="https://canva.link/877cj7wdvx0bq6q" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Inetership.jpg" alt="Sertifikat 1">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Internship Certification</h3>
+          <p class="certificate-type">Internship · PT Retgoo Sentris Informa</p>
+        </div>
+      </a>
+
+      <!-- Contoh Sertifikat 2 -->
+      <a href="https://canva.link/vsewjgbpa30l57q" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/SECC_berindaalyagmail.com_CCSE 190126-01-1-00053_page-0001.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Software Engineering</h3>
+          <p class="certificate-type">Coding camp · RevoU</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 3 -->
+      <a href="https://canva.link/1p4bkz4g1y59bxy" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/SERTIFIKAT SOLOLEARN.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Introduction to Java</h3>
+          <p class="certificate-type">Course · Sololearn</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 4 -->
+      <a href="https://canva.link/8cktmhygx9nvbsn" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Sertifikat_Berinda Alya Kusuma_harisenin_fullstack.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Full Stack Developer</h3>
+          <p class="certificate-type">Course · HariSenin</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 5 -->
+      <a href="https://canva.link/grkfxy5at8g7yvp" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Database Foundations Course.jpg" alt="Sertifikat 1">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Database Foundations Course</h3>
+          <p class="certificate-type">Course · ORACLE</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 6 -->
+      <a href="https://canva.link/e0wlkjfhrzmr5ub" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Database Foundations Final Exam.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Database Foundations Final Exam</h3>
+          <p class="certificate-type">Course · ORACLE</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 7 -->
+      <a href="https://canva.link/3wx9qf3samnamhl" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Java Foundation Course.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Java Foundation Course</h3>
+          <p class="certificate-type">Course · ORACLE</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 8 -->
+      <a href="https://canva.link/b88rme6vl3g9te0" target="_blank" rel="noopener noreferrer" class="certificate-card">
+          <div class="certificate-img-wrapper">
+            <img src="image/sertif/Java Foundation Final Exam_page-0001.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Java Foundation Final Exam</h3>
+          <p class="certificate-type">Course · ORACLE</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 9 -->
+      <a href="https://canva.link/ifk548jqm8akub2" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Java Fundamentals Course_page-0001.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Java Fundamentals Course</h3>
+          <p class="certificate-type">Course · ORACLE</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 10 -->
+      <a href="https://canva.link/aa1mnun3vmf0fb4" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Java Fundamentals Final Exam_page-0001.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Java Fundamentals Final Exam</h3>
+          <p class="certificate-type">Coding camp · RevoU</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 11 -->
+      <a href="https://canva.link/rdmibnjln55tim5" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/[E-Certificate] Award Generation Girl Malang_260209_142735.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Certificate Achivement</h3>
+          <p class="certificate-type">Volunteer · Generation Girl</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 12 -->
+      <a href="https://canva.link/53a2kwejlhmaj65" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/[E-Certificate]Generation Girl Malang_page-0001.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Certificate Achivement</h3>
+          <p class="certificate-type">Volunteer · Generation Girl</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 13 -->
+      <a href="https://canva.link/c573c46gjxoafbp" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Samsung UPP_page-0001.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Samsung UPP Ambassador</h3>
+          <p class="certificate-type">Ambassador · Samsung Indonesia</p>
+        </div>
+      </a>
+      <!-- Contoh Sertifikat 14 -->
+      <a href="https://canva.link/zcf8y1l2ni3zawh" target="_blank" rel="noopener noreferrer" class="certificate-card">
+        <div class="certificate-img-wrapper">
+          <img src="image/sertif/Sertifikat LO Olivia.jpg" alt="Sertifikat 2">
+        </div>
+        <div class="certificate-content">
+          <h3 class="certificate-title">Liaison Officer</h3>
+          <p class="certificate-type">Volunteer · Olivia X</p>
         </div>
       </a>
     </div>
