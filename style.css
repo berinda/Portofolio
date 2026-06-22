@@ -1136,20 +1136,23 @@
   } */
 .detail-images-layout {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
   gap: 1rem;
   align-items: stretch;
+  min-height: 520px;
 }
 
 .detail-image-side {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   height: 100%;
+  min-height: 0;
 }
 
 .detail-image--large {
   height: 100%;
+  min-height: 520px;
   border-radius: 22px;
   overflow: hidden;
   background: var(--surface2);
@@ -1158,7 +1161,8 @@
 .detail-image--large img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
   background: var(--surface2);
 }
@@ -1167,13 +1171,14 @@
   border-radius: 16px;
   overflow: hidden;
   background: var(--surface2);
-  max-height: 280px;   /* setengah dari 380px dikurangi gap */
+  min-height: 0;
+  height: 100%;
 }
 
 .detail-image-side .detail-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
   background: #F4F4F4;
@@ -1183,15 +1188,16 @@
 @media (max-width: 640px) {
   .detail-images-layout {
     grid-template-columns: 1fr;
-    height: auto;
+    min-height: unset;
   }
   .detail-image--large {
-    height: 300px;
+    min-height: 320px;
+    height: 360px;
   }
   .detail-image-side {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: unset;
-    height: 160px;
+    height: 180px;
   }
 }
   .detail-subtitle {
